@@ -1,0 +1,120 @@
+:root {
+  --font-color: #333333;
+  --focus-color: #9D5CD0;
+  --active-color: #7943A4;
+  --background: #808080;
+}
+
+html {
+  box-sizing: border-box;
+  /* scroll-behavior: smooth; -отключил ввиду некорректной работы скролла после закрытия модального окна*/
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline-width: 2px;
+  outline-color: var(--active-color);
+}
+
+*:focus {
+  outline-style: solid;
+  outline-offset: -2px;
+  outline-width: 2px;
+  outline-color: var(--active-color);
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.body {
+  min-width: 320px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--font-color);
+}
+
+.container {
+  max-width: 1640px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.btn-link {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  border: 3px solid;
+  background-color: transparent;
+  /* outline: none; */
+  transition-property: border-color, background-color;
+  transition-duration: .2s;
+}
+
+.visually-hidden {                      /*ВИЗУАЛЬНО СКРЫТЫЙ*/
+  position: absolute !important;        /*абсолютное позиционирование (высокий приоритет)*/
+  clip: rect(1px 1px 1px 1px);          /*для IE6, IE7*/
+  clip: rect(1px, 1px, 1px, 1px);       /*Всё, что не помещается в эту область, будет обрезано и становится невидимым*/
+  padding: 0 !important;                /*внутренние отступы обнулены (!)*/
+  border: 0 !important;                 /*толщина рамки обнулена (!)*/
+  height: 1px !important;               /*высота (!)*/
+  width: 1px !important;                /*ширина (!)*/
+  overflow: hidden;                     /*переполнение не отображается*/
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

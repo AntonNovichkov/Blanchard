@@ -1,0 +1,322 @@
+.contacts {
+  padding-top: 80px;
+}
+
+.contacts__container {
+  padding-left: 13px;
+}
+
+.contacts__title {
+  margin-bottom: 15px;
+  padding-left: calc((100vw - 1600px)/2 - 13px);
+  font-weight: 400;
+}
+
+.contacts__info {
+  max-width: 100%;
+  min-height: 700px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contacts__block {
+  min-width: 35.5%;
+  border: 1px solid #CACACA;
+}
+
+.contacts__content {
+  min-height: 700px;
+  padding-top: 124px;
+  padding-left: calc((100vw - 1600px)/2 - 14px);
+  padding-right: 18.4%;
+}
+
+.contacts__name-title {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.contacts__address {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-style: normal;
+}
+
+.contacts__form {
+  margin-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contacts__form-title {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.contacts__input {
+  outline: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 23px;
+  padding: 8px 24px;
+  line-height: 0;
+  border: 1px solid #333333;
+  border-radius: 100px;
+  transition-property: background, color,border;
+  transition: 0.2s linear;
+}
+.contacts__form-divv{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.contacts__input::placeholder {
+  font-size: 16px;
+  line-height: 32px;
+  color: #999999;
+}
+.contacts__input:hover,
+.contacts__input:focus,
+.contacts__input:focus-visible{
+  background-color: #EAEAEA;
+}
+.contacts__button {
+  position: relative;
+  outline: 0;
+  box-sizing: border-box;
+  padding: 15px 33px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #9D5CD0;
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: color, background, border;
+  transition-duration: .2s;
+}
+.contacts__button:hover{
+  color: #fff;
+  background-color: #9D5CD0;
+  border-color: #D1A9F0;
+}
+.contacts__button:active {
+  color: #fff;
+  background-color: #7943A4;
+  border-color: #D1A9F0;
+}
+.contacts__button::before{
+  content: "";
+  position: absolute;
+  outline: 0;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  background-color: #9D5CD0;
+  z-index: -1;
+  opacity: 0;
+  transition:  opacity 0.2s linear;
+}
+.contacts__button::before{
+  background-color: transparent;
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+}
+.contacts__button:focus-visible{
+  color: #fff;
+  background-color: #9D5CD0;
+}
+.contacts__button:focus-visible::before{
+  opacity: 1;
+}
+.contacts__title-call {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 24px;
+}
+.js-validate-error-label{
+  margin-left: 26px;
+}
+.contacts__social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.contacts__social-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.contacts__social {
+  display: block;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.2s linear;
+}
+.contacts__social--whatsapp svg,
+.contacts__social--telegram svg{
+  outline: 0;
+  outline-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  transition-property: border, fill, color;
+  transition: 0.2s linear;
+}
+.contacts__social--whatsapp svg:active,
+.contacts__social--telegram svg:active{
+  border-color: #9643A4;
+}
+.contacts__social--whatsapp svg path:hover,
+.contacts__social--whatsapp svg path:focus,
+.contacts__social--whatsapp svg path:focus-visible{
+  fill: #a1f0b2;
+
+}
+.contacts__social--telegram svg path:hover,
+.contacts__social--telegram svg path:focus-visible,
+.contacts__social--telegram svg path:focus{
+  fill: #6dc4f3;
+}
+/*-----------------------------яндекс карта----------------------------*/
+.contacts__map {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+}
+
+[class*="ground-pane"] { /*все классы, содержащие в названии "ground-pane"*/
+  filter: grayscale(1);  /*убираем цветность*/
+}
+
+
+
+@media (max-width: 1400px) {
+  .contacts__block {
+    min-width: 47.6%;
+  }
+  .contacts__form-title{
+    margin: 0 0 16px 0;
+  }
+  .contacts__content {
+    padding-right: 23%;
+  }
+  .contacts__social-item {
+    width: 60px;
+    height: 60px;
+  }
+  .contacts__social-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .contacts__social svg{ 
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .contacts__container {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .contacts__block {
+    min-width: 56%;
+  }
+  .contacts__title {
+    margin-bottom: 16px;
+  }
+  .contacts__content {
+    padding-right: 11.7%;
+  }
+}
+@media (max-width: 600px) {
+  .contacts {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .contacts__container {
+    padding-left: 0;
+  }
+  .contacts__title {
+    margin-bottom: 12px;
+    padding: 0 15px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .contacts__block {
+    min-width: unset;
+    width: 100%;
+    border: none;
+  }
+  .contacts__content {
+    padding: 0 0 0 0;
+  }
+  .contacts__name-title {
+    padding: 0 15px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .contacts__address {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .contacts__map {
+    min-height: unset;
+    height: 320px;
+  }
+  .contacts__form {
+    margin-bottom: 0;
+    padding: 20px 15px;
+  }
+  .contacts__form-title {
+    font-size: 18px;
+  }
+  .contacts__input--tel {
+    margin-bottom: 18px;
+  }
+  .contacts__button {
+    padding: 10px 33px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .contacts__title-call {
+    margin-bottom: 7px;
+    padding: 0 15px;
+    font-size: 18px;
+  }
+  .contacts__social-list {
+    padding: 0 15px;
+  }
+  .contacts__social-item {
+    width: 50px;
+    height: 50px;
+  }
+  .contacts__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .contacts__social svg{
+    width: 50px;
+    height: 50px;
+  }
+}

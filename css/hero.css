@@ -1,0 +1,219 @@
+.main {
+  margin-top: -170px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+}
+
+.hero__swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+.hero__slide {
+  overflow: hidden;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-size: cover;
+  animation: scale 25s alternate linear infinite;
+}
+.hero__slide--1 {
+  background-image: url("../img/png/birmingham-1.jpg");
+}
+
+.hero__slide--2 {
+  background-image: url("../img/png/birmingham-2.jpg");
+}
+
+.hero__slide--3 {
+  background-image: url("../img/png/birmingham-3.jpg");
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}
+.hero__container {
+  padding-top: 239px;
+  padding-bottom: 120px;
+}
+
+.hero__content {
+  max-width: 600px;
+}
+
+.hero__title {
+  margin-bottom: 19px;
+  font-size: 72px;
+  line-height: 84px;
+  color: #FFFFFF;
+}
+
+.hero__description {
+  margin-top: 0;
+  margin-bottom: 92px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.hero__link {
+  display: inline-block;
+  padding: 20px 33px;
+  border-radius: 100px;
+  border-color:  transparent;
+  color: #FFFFFF;
+  background-color: var(--focus-color); 
+}
+
+.hero__link:focus,
+.hero__link:hover {
+  border-color: #D1A9F0;
+}
+
+.hero__link:active {
+  background-color: var(--active-color);
+}
+.bg__outline__focus{
+  cursor: pointer;
+  position: relative;
+  outline: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding: 22.5px 35px;
+  border-radius: 100px;
+  border: 3px solid #9D5CD0;
+  background-color: #9D5CD0;
+  transition-property: background, border;
+  transition: 0.2s linear;
+}
+.bg__outline__focus::before{
+  content: "";
+  position: absolute;
+  outline: 0;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  transition: border 0.2s linear;
+}
+.bg__outline__focus:hover:not(:focus-visible){
+  border-color: #D1A9F0;
+}
+.bg__outline__focus:focus-visible:before {
+  opacity: 1;
+}
+.bg__outline__focus:active:not(:focus-visible),
+.bg__outline__focus.btn-active:active {
+  background-color: #7943A4;
+  border-color: #D1A9F0;
+}
+.bg__outline__focus:focus-visible::before{
+  border-color: #C283F3;
+}
+
+
+@media (max-width: 1400px) {
+  .hero__slide--1 {
+    background-image: url("../img/png1024/birmingham-1024.jpg");
+  }
+  .hero__slide--2 {
+    background-image: url("../img/png1024/birmingham-museums-1024.jpg");
+  }
+  .hero__slide--3 {
+    background-image: url("../img/png1024/birmingham-museums-trust-1024.jpg");
+  }
+}
+@media (max-width: 1024px) {
+  .main {
+    margin-top: -132px;
+  }
+  .hero__container {
+    padding-top: 244px;
+  }
+  .hero__content {
+    max-width: 655px;
+  }
+  .hero__title {
+    margin-bottom: 10px;
+  }
+  .hero__description {
+    margin-bottom: 152px;
+  }
+  .bg__outline__focus{
+    padding: 20.5px 32px;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: 442px;
+  }
+  .hero__slide--1 {
+    background-image: url("../img/png320/birmingham-museums-trust-MK_98NuC4-4-unsplash1.jpg");
+  }
+  .hero__slide--2 {
+    background-image: url("../img/png320/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg");
+  }
+  .hero__slide--3 {
+    background-image: url("../img/png320/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
+  }
+  .hero__container {
+    padding-top: 165px;
+    padding-bottom: 21px;
+  }
+  .hero__content {
+    text-align: center;
+  }
+  .hero__title {
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .hero__description {
+    padding: 0 10px;
+    margin-bottom: 43px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .hero__link {
+    padding: 9px 16px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .bg__outline__focus{
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+

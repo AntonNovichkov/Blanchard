@@ -1,0 +1,35 @@
+.about-us__container {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+.about-us__title {
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.about-us__description {
+  max-width: 1080px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333;
+}
+
+
+@media (max-width: 600px) {
+  .about-us__container {
+    padding-top: 50px;
+    padding-bottom: 41px;
+  }
+  
+  .about-us__title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .about-us__description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}

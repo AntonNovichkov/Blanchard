@@ -1,0 +1,444 @@
+.gallery {
+  background-image: url("../img/png/birmingham-museums-trust.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery__container {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.gallery__content {
+  width: 25%;
+  min-height: 845px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.gallery__title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.gallery__span {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+/*----------------------селект----------------------------*/
+.gallery__form {
+  outline: 0;
+  margin-bottom: auto;
+  transition: all 0.2s linear
+}
+.gallery__form:hover,
+.gallery__form:focus-visible{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+.choices__inner {
+  min-height: unset;
+  padding: 0 0 0 10px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 6px;
+}
+
+.choices[data-type*=select-one]:after {
+  content: url("../img/svg/Rectangle66.svg");
+  top: 15%;
+  right: 3.5%;
+  width: auto;
+  height: auto;
+  border-style: unset;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  top: 40%;
+  transform: rotate(180deg);
+}
+
+#choices--selectCustom-item-choice-1 {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item {
+  padding: 3px 0 2px 20px;
+  font-size: 16px;
+  border: 1px solid transparent;
+}
+
+.choices__list--dropdown,
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  border-radius: 6px;
+  background-color: transparent;
+  color: #999999;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  border: 1px solid #ffffff;
+  background-color: rgb(255, 255, 255, .2);
+  
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__item--selectable:after {
+  content: none;
+}
+.is-selected{
+  display: none !important;
+}
+#choices--selectCustom-item-choice-1{
+  display: block;
+}
+/*--------------------------------------------------------*/
+.gallery__description {
+  margin: 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.gallery__description-768 {
+  display: none;
+}
+
+.gallery__link {
+  color: var(--focus-color);
+  border-bottom: 2px solid transparent;
+  transition: color, border-color .2s ease-in-out;
+}
+
+.gallery__link:hover,
+.gallery__link:focus {
+  border-color: var(--focus-color);
+}
+
+.gallery__link:active {
+  color: var(--active-color);
+}
+/*---------------------слайдер----------------------------*/
+
+.gallery__swiper-container {
+  width: 71.8%;
+  height: 845px;
+  margin: 0;
+  padding: 25px 0 25px 0;
+}
+
+.gallery__slide {
+  flex-grow: 1;
+  height: auto;
+}
+
+.gallery__img-button {
+  position: relative;
+  width: 100%;
+  height: 92%;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery__img-button::before {
+  position: absolute;
+  content: url("../img/svg/search+.svg");
+  top: 25px;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity .2s;
+  opacity: 0;
+}
+
+.gallery__img-button::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+  border: 2px solid #D1A9F0;
+  transition: opacity .2s;
+  opacity: 0;
+}
+
+.gallery__img-button:hover::before,
+.gallery__img-button:focus::before,
+.gallery__img-button:active::after {
+  opacity: 1;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+}
+
+/*-----------------*/
+.swiper-section .container {
+  max-width: 1703px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+  display: flex;
+}
+
+.swiper-left--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 300px;
+}
+
+.swiper-right--content {
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-right--content .swiper-wrapper {
+    height: 750px;
+}
+.swiper-btn--prev, 
+.swiper-btn--next {
+  outline: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #666;
+  border-radius: 100%;
+  background-color: #666666;
+  color: #fff;
+}
+.swiper-right-btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  margin-bottom: 40px;
+}
+.swiper-pagination--right {
+  color: #fff;
+  max-width: 47px;
+  text-align: center;
+}
+.swiper-btn--prev {
+  margin-right: 11px;
+  margin-left: 2px;
+}
+.swiper-pagination--right {
+  margin-right: 11px;
+}
+.sw-btn.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.swiper-btn--prev:focus,
+.swiper-btn--prev:focus-visible{
+  border-color: #000;
+}
+.swiper-btn--next:focus,
+.swiper-btn--next:focus-visible{
+  border-color: #000;
+}
+.sw-btn:hover{
+  background-color: #9D5CD0;
+}
+.sw-btn:active{
+  background-color: #7943A4;
+  border-color: #000;
+}
+/*------------------------------Модальные окна---------------------------------*/
+.modal__container {
+  width: 900px;
+  padding: 5px;
+  border-radius: unset;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content__img {
+  width: 400px;
+  height: 500px;
+}
+
+.modal-content__text {
+  padding: 10px 45px 10px 50px;
+}
+
+.modal-content__title-artist {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-content__tile-picture {
+  margin: 0;
+}
+
+.modal-content__span {
+  font-size: 12px;
+  line-height: 16px;
+  color: #969696;
+}
+
+
+
+
+@media (max-width: 1400px) {
+  .gallery__img-button {
+    max-height: 279px;
+  }
+  .gallery__content {
+    min-height: 689px;
+    width: 30.3%;
+  }
+  .gallery__swiper-container {
+    height: 689px;
+    width: 64.3%;
+  }
+  /*----------модальное окно 1024---------*/
+  .modal__container {
+    width: 594px;
+  }
+  .modal-content__img {
+    width: 264px;
+    height: 594px;
+  }
+  .modal-content__text {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
+  /*--------------------------------------*/
+}
+@media (max-width: 850px) {
+  .gallery__container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .gallery__content {
+    width: 42%;
+    min-height: 188px;
+  }
+  .gallery__swiper-container {
+    width: 100%;
+    height: 710px;
+    padding-bottom: 30px;
+  }
+  .gallery__slide{
+    margin-top: 0 !important;
+  }
+  .gallery__description {
+    display: none;
+  }
+  .gallery__description-768 {
+    display: block;
+    margin-top: -1px;
+  }
+  /*----------модальное окно 768---------*/
+  .modal__container {
+    max-width: 668px;
+  }
+  .modal-content__img {
+    width: 301px;
+  }
+  .modal-content__text {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
+  /*--------------------------------------*/
+}
+
+@media (max-width: 600px) {
+  .gallery__container {
+    padding-top: 50px;
+    padding-bottom: 41px;
+  }
+  .gallery__content {
+    width: 100%;
+    min-height: 167px;
+  }
+  .gallery__title {
+    margin-bottom: 11px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .gallery__span {
+    margin-bottom: 5px;
+  }
+  .gallery__swiper-container {
+    height: unset;
+    min-height: 367px;
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .gallery__img-button {
+    min-height: 367px;
+  }
+  .gallery__swiper-button-prev, .gallery__swiper-button-next {
+    top: unset;
+    bottom: 0;
+  }
+  .gallery__swiper-button-next {
+    left: 62%;
+  }
+  .gallery__swiper-button-prev {
+    left: 27.5%;
+  }
+  .gallery__swiper-pagination {
+    top: unset;
+    bottom: -2px;
+    left: 43%;
+  }
+  .swiper-pagination--right{
+    min-width: 52px;
+  }
+  /*----------модальное окно 320---------*/
+  .modal__container {
+    width: 290px;
+  }
+  .modal-content {
+    flex-direction: column;
+  }
+  .modal-content__img {
+    width: 290px;
+    height: 200px;
+  }
+  .modal-content__text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /*--------------------------------------*/
+}
